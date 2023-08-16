@@ -37,12 +37,14 @@ public class Main {
             int max = 0;
             String text;
             try {
-                text = queque1.take();
-                for (char a : text.toCharArray()) {
-                    if (a == 'a') count++;
+                while (textGen.isAlive()) {
+                    text = queque1.take();
+                    for (char a : text.toCharArray()) {
+                        if (a == 'a') count++;
+                    }
+                    if (count > max) max = count;
+                    count = 0;
                 }
-                if (count > max) max = count;
-                count = 0;
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -54,12 +56,14 @@ public class Main {
             int max = 0;
             String text;
             try {
-                text = queque2.take();
-                for (char a : text.toCharArray()) {
-                    if (a == 'b') count++;
+                while (textGen.isAlive()) {
+                    text = queque2.take();
+                    for (char a : text.toCharArray()) {
+                        if (a == 'b') count++;
+                    }
+                    if (count > max) max = count;
+                    count = 0;
                 }
-                if (count > max) max = count;
-                count = 0;
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -71,12 +75,14 @@ public class Main {
             int max = 0;
             String text;
             try {
-                text = queque3.take();
-                for (char a : text.toCharArray()) {
-                    if (a == 'c') count++;
+                while (textGen.isAlive()) {
+                    text = queque3.take();
+                    for (char a : text.toCharArray()) {
+                        if (a == 'c') count++;
+                    }
+                    if (count > max) max = count;
+                    count = 0;
                 }
-                if (count > max) max = count;
-                count = 0;
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
