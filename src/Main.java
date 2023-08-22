@@ -37,7 +37,7 @@ public class Main {
             int max = 0;
             String text;
             try {
-                while (textGen.isAlive()) {
+                for (int i = 0; i < 10000; i++){
                     text = queque1.take();
                     for (char a : text.toCharArray()) {
                         if (a == 'a') count++;
@@ -56,7 +56,7 @@ public class Main {
             int max = 0;
             String text;
             try {
-                while (textGen.isAlive()) {
+                for (int i = 0; i < 10000; i++){
                     text = queque2.take();
                     for (char a : text.toCharArray()) {
                         if (a == 'b') count++;
@@ -75,7 +75,7 @@ public class Main {
             int max = 0;
             String text;
             try {
-                while (textGen.isAlive()) {
+                for (int i = 0; i < 10000; i++){
                     text = queque3.take();
                     for (char a : text.toCharArray()) {
                         if (a == 'c') count++;
